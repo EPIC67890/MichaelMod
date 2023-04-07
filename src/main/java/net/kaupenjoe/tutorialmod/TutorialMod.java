@@ -6,11 +6,15 @@ import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.networking.ModMessages;
 import net.kaupenjoe.tutorialmod.painting.ModPaintings;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
+import net.kaupenjoe.tutorialmod.world.dimension.ModDimensions;
 import net.kaupenjoe.tutorialmod.world.feature.ModConfiguredFeatures;
 import net.kaupenjoe.tutorialmod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.living.LivingSpawnEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,6 +39,8 @@ public class TutorialMod {
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
 
+        ModDimensions.register();
+
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
 
@@ -58,5 +64,6 @@ public class TutorialMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
         }
+
     }
 }

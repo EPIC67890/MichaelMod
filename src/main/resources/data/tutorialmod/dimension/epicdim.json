@@ -1,0 +1,17 @@
+{
+  "type": "tutorialmod:epicdim",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:plains",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:air",
+          "height": 1
+        }
+      ]
+    }
+  }
+}
